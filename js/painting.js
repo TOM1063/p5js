@@ -19,6 +19,7 @@ function setup() {
     fill(255,255,210);
     noStroke();
     rect(0,80,windowWidth,windowHeight - 200);
+    img = loadImage('assets/map.png');
     
 }
 
@@ -116,6 +117,7 @@ function scene2() {
         vertex(points_x[i]/4,points_y[i]/4);
     }
     endShape();
+    image(img, 100, 0);
     
 }
 
