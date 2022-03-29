@@ -12,16 +12,17 @@ function setup() {
     scene_num = 0;
     createCanvas(windowWidth,windowHeight);
     button_0 = createButton('FIND VIEW');
-    button_0.position(windowWidth/2 -100 , windowHeight - 100);
+    button_0.position(windowWidth/2 -100 , windowHeight - 80);
     button_0.mousePressed(gotoscene1);
     button_0.size(200,50);
     time = 0;
-    background(255,255,220);
+    fill(255,255,210);
+    noStroke();
+    rect(0,80,windowWidth,windowHeight - 200);
     
 }
 
 function draw() {
-    background(255,255,220);
     if (scene_num == 0) {
         scene0();
     }
@@ -50,13 +51,12 @@ function gotoscene2() {
 }
 
 function scene0() {
-    background(255,255,220);
     fill(100);
     noStroke();
-    textSize(32);
+    textSize(50);
     textFont("Sawarabi Mincho");
     textAlign(CENTER, CENTER);
-    text('誰でも画伯', windowWidth/2, 50);
+    text('ダレデモ画伯', windowWidth/2, 40);
 
     fill(0, 102, 153);
     noFill();
@@ -74,10 +74,10 @@ function scene0() {
 function scene1() {
     fill(100);
     noStroke();
-    textSize(32);
+    textSize(50);
     textFont("Sawarabi Mincho");
     textAlign(CENTER, CENTER);
-    text('誰でも画伯', windowWidth/2, 50);
+    text('ダレデモ画伯', windowWidth/2, 40);
 
     noFill();
     stroke(200);
@@ -99,14 +99,14 @@ function scene2() {
     background(255);
     fill(100);
     noStroke();
-    textSize(32);
+    textSize(50);
     textFont("Sawarabi Mincho");
     textAlign(CENTER, CENTER);
-    text('誰でも画伯', windowWidth/2, 50);
+    text('ダレデモ画伯', windowWidth/2, 40);
 
-    fill(255,255,220);
+    fill(255,255,210);
     stroke(50);
-    strokeWeight(1);
+    noStroke();
     rect(10,10,windowWidth / 4, windowHeight/ 4);
     noFill();
     stroke(200);
