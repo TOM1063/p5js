@@ -13,7 +13,7 @@ var scene_2_steps;
 
 function preload(){
     img = loadImage("js/map.png");    //画像の読み込み
-    img_withedge = loadImage("js/map_edge.png");
+    img_withedge = loadImage("js/map_withedge.png");
     img_edge = loadImage("js/map_edge.png");
 }
 
@@ -150,6 +150,7 @@ function scene2() {
     }
     if(scene_2_steps&3 == 2){
         image(img_edge,0, 100);
+        background(0);
 
         noFill();
         stroke(200);
