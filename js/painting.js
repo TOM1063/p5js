@@ -122,6 +122,7 @@ function scene2() {
     if (pen_grad == 0) {
         scene_2_steps ++;
     }
+
     if(scene_2_steps%3 == 0){
         fill(255,255,255);
         noStroke();
@@ -136,7 +137,7 @@ function scene2() {
         }
         endShape();
     }
-    if(scene_2_steps%3 == 1){
+    else if(scene_2_steps%3 == 1){
         image(img_withedge,0, 100);
 
         noFill();
@@ -148,7 +149,7 @@ function scene2() {
         }
         endShape();
     }
-    if(scene_2_steps&3 == 2){
+    else if(scene_2_steps&3 == 2){
         //image(img_edge,0, 100);
         background(0);
 
