@@ -15,9 +15,9 @@ var rect_size_y;
 
 
 function preload(){
-    // img = loadImage("js/map.png");    //画像の読み込み
-    // img_withedge = loadImage("js/map_withedge.png");
-    // img_edge = loadImage("js/map_edge.png");
+    img = loadImage("js/map.png");    //画像の読み込み
+    img_withedge = loadImage("js/map_withedge.png");
+    img_edge = loadImage("js/map_edge.png");
 }
 
 function setup() {
