@@ -102,7 +102,7 @@ function scene1() {
 
     if (time >= 200){
         gotoscene2();
-        time = 0;
+        time = 1;
     }
 }
 
@@ -120,7 +120,7 @@ function scene2() {
     stroke(200);
     strokeWeight(2);
     beginShape();
-    var pen_grad = time % points_x.length + 1;
+    var pen_grad = time % points_x.length;
     if ((pen_grad == 0) && scene_2_steps != 2) {
         scene_2_steps ++;
     }
