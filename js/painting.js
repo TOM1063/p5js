@@ -116,10 +116,6 @@ function scene2() {
     text('ダレデモ画伯', windowWidth/2, 40);
 
 
-    noFill();
-    stroke(200);
-    strokeWeight(2);
-    beginShape();
     var pen_grad = time % points_x.length;
     if ((pen_grad == 0) && scene_2_steps != 2) {
         scene_2_steps ++;
@@ -128,12 +124,39 @@ function scene2() {
         fill(255,255,255);
         noStroke();
         rect(20,80,windowWidth-40,windowHeight - 200);
+
+        noFill();
+        stroke(200);
+        strokeWeight(2);
+        beginShape();
+        for (var i = 0; i < pen_grad; i ++) {
+            vertex(points_x[i],points_y[i]);
+        }
+        endShape();
     }
     if(scene_2_steps%3 == 1){
         image(img_widthedge,0, 100);
+        
+        noFill();
+        stroke(200);
+        strokeWeight(2);
+        beginShape();
+        for (var i = 0; i < pen_grad; i ++) {
+            vertex(points_x[i],points_y[i]);
+        }
+        endShape();
     }
     if(scene_2_steps&3 == 2){
         image(img_edge,0, 100);
+
+        noFill();
+        stroke(200);
+        strokeWeight(2);
+        beginShape();
+        for (var i = 0; i < pen_grad; i ++) {
+            vertex(points_x[i],points_y[i]);
+        }
+        endShape();
     }
 
     beginShape();
