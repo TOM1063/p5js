@@ -110,6 +110,7 @@ function scene2() {
 
     image(img, 100, 0);
 
+
     fill(255,255,210);
     stroke(50);
     noStroke();
@@ -122,6 +123,19 @@ function scene2() {
         vertex(points_x[i]/4,points_y[i]/4);
     }
     endShape();
+
+    noFill();
+    stroke(200);
+    strokeWeight(2);
+    beginShape();
+    for (var i = 0; i < time % points_x.length; i ++) {
+        vertex(points_x[i],points_y[i]);
+    }
+    endShape();
+
+    time ++;
+
+    
     
 }
 
