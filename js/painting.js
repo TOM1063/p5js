@@ -26,7 +26,7 @@ function setup() {
     createCanvas(windowWidth,windowHeight);
     //background(70);
     button_0 = createButton('FIND VIEW');
-    button_0.position(windowWidth/2 -100 , windowHeight - 500);
+    button_0.position(windowWidth/2 -100 , windowHeight/2 + rect_size_y/2 + 100);
     button_0.mousePressed(gotoscene1);
     button_0.size(250,70);
     let col = color(255);
