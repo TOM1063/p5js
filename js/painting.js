@@ -141,7 +141,7 @@ function scene2() {
     }
     else if(scene_2_steps%3 == 1){
         console.log("scene2_step1");
-        image(img_withedge,0, 100);
+        image(img_withedge,(windowWidth - windowWidth/2)/2, windowHeight/2);
 
         noFill();
         stroke(200);
@@ -154,7 +154,7 @@ function scene2() {
     }
     else if(scene_2_steps%3 == 2){
         console.log("scene2_step2");
-        image(img_edge,0, 100);
+        image(img_edge,(windowWidth - windowWidth/2)/2, windowHeight/2);
 
         noFill();
         stroke(200);
@@ -170,7 +170,7 @@ function scene2() {
     fill(255,255,210);
     stroke(50);
     noStroke();
-    rect(10,10,windowWidth / 4, windowHeight/ 4);
+    rect((windowWidth - windowWidth/2)/2,10,windowWidth / 2, windowHeight/ 2);
     noFill();
     stroke(200);
     strokeWeight(2);
