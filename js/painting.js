@@ -6,14 +6,18 @@ let button;
 var scene_num;
 var time;
 let img;
+var scene_2_steps;
 
 
 function preload(){
     img = loadImage("js/map.png");    //画像の読み込み
+    img_widthedge = loadImage("js/map_withedge.png");
+    img_edge = loadImage("js/map_edge.png");
 }
 
 function setup() {
     scene_num = 0;
+    scene_2_steps = 0;
     createCanvas(windowWidth,windowHeight);
     background(70);
     button_0 = createButton('FIND VIEW');
@@ -98,6 +102,7 @@ function scene1() {
 
     if (time >= 200){
         gotoscene2();
+        time = 0;
     }
 }
 
@@ -109,9 +114,6 @@ function scene2() {
     textFont("Sawarabi Mincho");
     textAlign(CENTER, CENTER);
     text('ダレデモ画伯', windowWidth/2, 40);
-
-    image(img,0, 100);
-
 
     fill(255,255,210);
     stroke(50);
@@ -130,12 +132,29 @@ function scene2() {
     stroke(200);
     strokeWeight(2);
     beginShape();
-    for (var i = 0; i < time % points_x.length; i ++) {
+    var pen_grad = time % points_x.length;
+    if (pen_grad == 0) {
+        scene_2_steps ++;
+    }
+    if(scene_2_steps%3 == 0){
+        fill(255,255,255);
+        noStroke();
+        rect(20,80,windowWidth-40,windowHeight - 200);
+    }
+    if(scene_2_steps%3 == 1){
+        image(img_widthedge,0, 100);
+    }
+    if(scene_2_steps&3 == 2){
+        image(img_edge,0, 100);
+    }
+
+    beginShape();
+    for (var i = 0; i < pen_grad; i ++) {
         vertex(points_x[i],points_y[i]);
     }
     endShape();
 
-    time ++;
+    time++;
 
     
     
