@@ -137,7 +137,7 @@ function scene2() {
 
     rect(20,(windowHeight - rect_size_y) /4 + rect_size_y/2 + 50,rect_size_x,rect_size_y);
     img_edge.resize(rect_size_x,rect_size_y);
-    image(img_edge,20,(windowHeight - rect_size_y) /4);
+    image(img_edge,20,(windowHeight - rect_size_y) /4+ rect_size_y/2 + 50);
 
         // noFill();
         // stroke(200);
