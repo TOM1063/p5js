@@ -176,7 +176,7 @@ function scene2() {
     strokeWeight(2);
     beginShape();
     for (var i = 0; i < points_x.length; i ++) {
-        vertex(points_x[i]/4,points_y[i]/4);
+        vertex(points_x[i]/2 + (windowWidth - windowWidth/2)/2,points_y[i]/2 + 100);
     }
     endShape();
     time++;
