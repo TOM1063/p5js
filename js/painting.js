@@ -15,9 +15,9 @@ var rect_size_y;
 
 
 function preload(){
-    // img = loadImage("js/map.png");    //画像の読み込み
-    // img_withedge = loadImage("js/map_withedge.png");
-    // img_edge = loadImage("js/map_edge.png");
+    img = loadImage("js/map.png");    //画像の読み込み
+    img_withedge = loadImage("js/map_withedge.png");
+    img_edge = loadImage("js/map_edge.png");
 }
 
 function setup() {
@@ -117,13 +117,16 @@ function scene2() {
     background(255);
 
     button_0.position(1000000,1000000);
-
     fill(0);
     noStroke();
-    textSize(20);
+    rect(20,(windowHeight - rect_size_y) /4 - rect_size_y/2,250,50);
+    fill(255);
+    noStroke();
+    textSize(30);
     textFont("Sawarabi Mincho");
     textAlign(CENTER, CENTER);
-    text('Your Drawing', 100, (windowHeight - rect_size_y) /4 - rect_size_y/2 + 25);
+    text
+    text('Your Drawing', 140, (windowHeight - rect_size_y) /4 - rect_size_y/2 + 25);
 
     noFill();
     stroke(0);
@@ -143,17 +146,20 @@ function scene2() {
 
     fill(0);
     noStroke();
-    textSize(20);
+    rect(20,(windowHeight - rect_size_y) /4 + rect_size_y/2 + 50,250,50);
+    fill(255);
+    noStroke();
+    textSize(30);
     textFont("Sawarabi Mincho");
     textAlign(CENTER, CENTER);
-    text('Result', 70,(windowHeight - rect_size_y) /4 + rect_size_y/2 + 50 + 25);
+    text('Result', 140,(windowHeight - rect_size_y) /4 + rect_size_y/2 + 50 + 25);
 
     noFill();
     stroke(0);
     strokeWeight(1);
     rect(20,(windowHeight - rect_size_y) /4 + rect_size_y/2 + 50,rect_size_x,rect_size_y);
-    //img_edge.resize(rect_size_x,rect_size_y);
-    //image(img_edge,20,(windowHeight - rect_size_y) /4+ rect_size_y/2 + 50);
+    img_edge.resize(rect_size_x,rect_size_y);
+    image(img_edge,20,(windowHeight - rect_size_y) /4+ rect_size_y/2 + 50);
 
         // noFill();
         // stroke(200);
