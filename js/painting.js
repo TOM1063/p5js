@@ -5,8 +5,12 @@ const points_y = [];
 let button;
 var scene_num;
 var time;
+let img;
 
 
+function preload(){
+    img = loadImage("js/map.png");    //画像の読み込み
+}
 
 function setup() {
     scene_num = 0;
@@ -19,7 +23,6 @@ function setup() {
     fill(255,255,210);
     noStroke();
     rect(0,80,windowWidth,windowHeight - 200);
-    img = loadImage('map.png');
     
 }
 
