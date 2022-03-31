@@ -33,6 +33,7 @@ function setup() {
     button_0.size(250,70);
     let col = color(255);
     button_0.style('background-color',col);
+    button_0.textSize(30);
     time = 0;
     //fill(255,255,210);
     fill(255,255,255);
