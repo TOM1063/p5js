@@ -173,7 +173,7 @@ function scene2() {
         //     vertex(points_x[i],points_y[i]);
         // }
         // endShape();
-    if(pen_grad != points_x.length){
+    if(pen_grad < points_x.length){
         time ++;
     }
     
