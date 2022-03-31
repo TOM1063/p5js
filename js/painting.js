@@ -15,9 +15,9 @@ var rect_size_y;
 
 
 function preload(){
-    // img = loadImage("js/map.png");    //画像の読み込み
-    // img_withedge = loadImage("js/map_withedge.png");
-    // img_edge = loadImage("js/map_edge.png");
+    img = loadImage("js/map.png");    //画像の読み込み
+    img_withedge = loadImage("js/map_withedge.png");
+    img_edge = loadImage("js/map_edge.png");
 }
 
 function setup() {
@@ -39,6 +39,10 @@ function setup() {
 
     rect_size_x = (windowWidth - 40);
     rect_size_y = (windowWidth - 40)*9/16;
+    noFill();
+    stroke(0);
+    strokeWeight(1);
+    rect(20,(windowHeight - rect_size_y) /4,rect_size_x,rect_size_y)
     
 }
 
@@ -77,11 +81,6 @@ function scene0() {
     // textFont("Sawarabi Mincho");
     // textAlign(CENTER, CENTER);
     // text('ダレデモ画伯', windowWidth/2, 40);
-
-    noFill();
-    stroke(0);
-    strokeWeight(1);
-    rect(20,(windowHeight - rect_size_y) /4,rect_size_x,rect_size_y)
 
     fill(0, 102, 153);
     noFill();
