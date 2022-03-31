@@ -157,6 +157,8 @@ function scene2() {
     textFont("Sawarabi Mincho");
     textAlign(CENTER, CENTER);
     text('Result', 140,(windowHeight - rect_size_y) /4 + rect_size_y/2 + 50 + 25);
+    fill(0);
+    text('Site : Chiyoda-Ku Tokyo    70% Matching', 600,(windowHeight - rect_size_y) /4 + rect_size_y/2 + 50 + 25);
 
     noFill();
     stroke(0);
@@ -171,7 +173,9 @@ function scene2() {
         //     vertex(points_x[i],points_y[i]);
         // }
         // endShape();
-    time ++;
+    if(pen_grad != points_x.length){
+        time ++;
+    }
     
 }
 
