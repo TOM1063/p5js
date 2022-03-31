@@ -161,12 +161,6 @@ function scene2() {
         endShape();
     }
 
-    beginShape();
-    for (var i = 0; i < pen_grad; i ++) {
-        vertex(points_x[i],points_y[i]);
-    }
-    endShape();
-
 
     fill(255,255,210);
     stroke(50);
