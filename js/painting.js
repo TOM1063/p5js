@@ -21,6 +21,8 @@ function preload(){
 }
 
 function setup() {
+    rect_size_x = (windowWidth - 40);
+    rect_size_y = (windowWidth - 40)*9/16;
     scene_num = 0;
     scene_2_steps = 0;
     createCanvas(windowWidth,windowHeight);
@@ -36,9 +38,6 @@ function setup() {
     fill(255,255,255);
     noStroke();
     //rect(20,80,windowWidth-40,windowHeight - 200);
-
-    rect_size_x = (windowWidth - 40);
-    rect_size_y = (windowWidth - 40)*9/16;
     noFill();
     stroke(0);
     strokeWeight(1);
