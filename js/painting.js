@@ -15,9 +15,9 @@ var rect_size_y;
 
 
 function preload(){
-    img = loadImage("js/map.png");    //画像の読み込み
-    img_withedge = loadImage("js/map_withedge.png");
-    img_edge = loadImage("js/map_edge.png");
+    // img = loadImage("js/map.png");    //画像の読み込み
+    // img_withedge = loadImage("js/map_withedge.png");
+    // img_edge = loadImage("js/map_edge.png");
 }
 
 function setup() {
@@ -116,15 +116,15 @@ function scene1() {
 function scene2() {
     background(255);
 
+    button_0.position(1000000,1000000);
+
     noFill();
     stroke(0);
     strokeWeight(1);
     rect(20,(windowHeight - rect_size_y) /4 - rect_size_y/2,rect_size_x,rect_size_y);
 
 
-
     var pen_grad = time % points_x.length;
-    image(img_edge,40,windowHeight/2 - 200);
     noFill();
     stroke(200);
     strokeWeight(2);
@@ -133,6 +133,11 @@ function scene2() {
         vertex(points_x[i] + (windowWidth - windowWidth/2)/2,points_y[i] + 100);
     }
     endShape();
+
+
+    rect(20,(windowHeight - rect_size_y) /4 + rect_size_y/2 + 50,rect_size_x,rect_size_y);
+    img_edge.resize(rect_size_x,rect_size_y);
+    image(img_edge,20,(windowHeight - rect_size_y) /4);
 
         // noFill();
         // stroke(200);
