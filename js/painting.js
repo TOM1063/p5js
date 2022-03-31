@@ -143,21 +143,6 @@ function scene2() {
         //     vertex(points_x[i],points_y[i]);
         // }
         // endShape();
-
-
-    fill(255,255,210);
-    stroke(50);
-    noStroke();
-    rect((windowWidth - windowWidth/2)/2,100,windowWidth / 2, windowHeight/ 2);
-    noFill();
-    stroke(200);
-    strokeWeight(2);
-    beginShape();
-    for (var i = 0; i < points_x.length; i ++) {
-        vertex(points_x[i]/2 + (windowWidth - windowWidth/2)/2,points_y[i]/2 + 100);
-    }
-    endShape();
-    time++;
     
 }
 
