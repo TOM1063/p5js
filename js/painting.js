@@ -130,7 +130,7 @@ function scene2() {
     strokeWeight(2);
     beginShape();
     for (var i = 0; i < pen_grad; i ++) {
-        vertex(points_x[i] + (windowWidth - windowWidth/2)/2,points_y[i] + 100);
+        vertex(points_x[i],points_y[i] -rect_size_y/2 - 50);
     }
     endShape();
 
@@ -147,6 +147,7 @@ function scene2() {
         //     vertex(points_x[i],points_y[i]);
         // }
         // endShape();
+    time ++;
     
 }
 
