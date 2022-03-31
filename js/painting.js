@@ -6,6 +6,8 @@ let button;
 var scene_num;
 var time;
 let img;
+let img_withedge;
+let img_edge;
 var scene_2_steps;
 
 
@@ -136,7 +138,7 @@ function scene2() {
     }
     if(scene_2_steps%3 == 1){
         image(img_widthedge,0, 100);
-        
+
         noFill();
         stroke(200);
         strokeWeight(2);
