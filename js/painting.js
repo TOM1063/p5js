@@ -15,9 +15,9 @@ var rect_size_y;
 
 
 function preload(){
-    img = loadImage("js/map.png");    //画像の読み込み
-    img_withedge = loadImage("js/map_withedge.png");
-    img_edge = loadImage("js/map_edge.png");
+    // img = loadImage("js/map.png");    //画像の読み込み
+    // img_withedge = loadImage("js/map_withedge.png");
+    // img_edge = loadImage("js/map_edge.png");
 }
 
 function setup() {
@@ -33,7 +33,7 @@ function setup() {
     button_0.size(250,70);
     let col = color(255);
     button_0.style('background-color',col);
-    button_0.textSize(30);
+    button_0.style('font-size', '25px');
     time = 0;
     //fill(255,255,210);
     fill(255,255,255);
