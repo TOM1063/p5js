@@ -28,7 +28,7 @@ function setup() {
     createCanvas(windowWidth,windowHeight);
     //background(70);
     button_0 = createButton('FIND VIEW');
-    button_0.position(windowWidth/2 -100 , windowHeight/2 + rect_size_y/2 + 100);
+    button_0.position(windowWidth/2 -100 , windowHeight/2 + rect_size_y/2 );
     button_0.mousePressed(gotoscene1);
     button_0.size(250,70);
     let col = color(255);
@@ -41,7 +41,7 @@ function setup() {
     noFill();
     stroke(0);
     strokeWeight(1);
-    rect(20,(windowHeight - rect_size_y) /4,rect_size_x,rect_size_y)
+    rect(20,(windowHeight/2 - rect_size_y/2) /2 - 100,rect_size_x,rect_size_y)
     
 }
 
