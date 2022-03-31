@@ -15,14 +15,16 @@ function preload(){
 function setup() {
     scene_num = 0;
     createCanvas(windowWidth,windowHeight);
+    background(70);
     button_0 = createButton('FIND VIEW');
     button_0.position(windowWidth/2 -100 , windowHeight - 80);
     button_0.mousePressed(gotoscene1);
     button_0.size(200,50);
     time = 0;
-    fill(255,255,210);
+    //fill(255,255,210);
+    fill(255,255,255);
     noStroke();
-    rect(0,80,windowWidth,windowHeight - 200);
+    rect(20,80,windowWidth-40,windowHeight - 200);
     
 }
 
@@ -55,7 +57,7 @@ function gotoscene2() {
 }
 
 function scene0() {
-    fill(100);
+    fill(255);
     noStroke();
     textSize(50);
     textFont("Sawarabi Mincho");
@@ -76,7 +78,7 @@ function scene0() {
 }
 
 function scene1() {
-    fill(100);
+    fill(255);
     noStroke();
     textSize(50);
     textFont("Sawarabi Mincho");
@@ -100,15 +102,15 @@ function scene1() {
 }
 
 function scene2() {
-    background(255);
-    fill(100);
+    background(70);
+    fill(255);
     noStroke();
     textSize(50);
     textFont("Sawarabi Mincho");
     textAlign(CENTER, CENTER);
     text('ダレデモ画伯', windowWidth/2, 40);
 
-    image(img, 100, 0);
+    image(img,0, 100);
 
 
     fill(255,255,210);
