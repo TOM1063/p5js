@@ -10,27 +10,35 @@ let img_withedge;
 let img_edge;
 var scene_2_steps;
 
+var rect_size_x;
+var rect_size_y;
+
 
 function preload(){
-    img = loadImage("js/map.png");    //画像の読み込み
-    img_withedge = loadImage("js/map_withedge.png");
-    img_edge = loadImage("js/map_edge.png");
+    // img = loadImage("js/map.png");    //画像の読み込み
+    // img_withedge = loadImage("js/map_withedge.png");
+    // img_edge = loadImage("js/map_edge.png");
 }
 
 function setup() {
     scene_num = 0;
     scene_2_steps = 0;
     createCanvas(windowWidth,windowHeight);
-    background(70);
+    //background(70);
     button_0 = createButton('FIND VIEW');
-    button_0.position(windowWidth/2 -100 , windowHeight - 80);
+    button_0.position(windowWidth/2 -100 , windowHeight - 500);
     button_0.mousePressed(gotoscene1);
-    button_0.size(200,50);
+    button_0.size(250,70);
+    let col = color(255);
+    button_0.style('background-color',col);
     time = 0;
     //fill(255,255,210);
     fill(255,255,255);
     noStroke();
-    rect(20,80,windowWidth-40,windowHeight - 200);
+    //rect(20,80,windowWidth-40,windowHeight - 200);
+
+    rect_size_x = (windowWidth - 40);
+    rect_size_y = (windowWidth - 40)*9/16;
     
 }
 
@@ -63,12 +71,17 @@ function gotoscene2() {
 }
 
 function scene0() {
-    fill(255);
-    noStroke();
-    textSize(50);
-    textFont("Sawarabi Mincho");
-    textAlign(CENTER, CENTER);
-    text('ダレデモ画伯', windowWidth/2, 40);
+    // fill(255);
+    // noStroke();
+    // textSize(50);
+    // textFont("Sawarabi Mincho");
+    // textAlign(CENTER, CENTER);
+    // text('ダレデモ画伯', windowWidth/2, 40);
+
+    noFill();
+    stroke(0);
+    strokeWeight(1);
+    rect(20,(windowHeight - rect_size_y) /4,rect_size_x,rect_size_y)
 
     fill(0, 102, 153);
     noFill();
@@ -84,12 +97,6 @@ function scene0() {
 }
 
 function scene1() {
-    fill(255);
-    noStroke();
-    textSize(50);
-    textFont("Sawarabi Mincho");
-    textAlign(CENTER, CENTER);
-    text('ダレデモ画伯', windowWidth/2, 40);
 
     noFill();
     stroke(200);
@@ -109,61 +116,34 @@ function scene1() {
 }
 
 function scene2() {
-    background(70);
-    fill(255);
-    noStroke();
-    textSize(50);
-    textFont("Sawarabi Mincho");
-    textAlign(CENTER, CENTER);
-    text('ダレデモ画伯', windowWidth/2, 40);
+    background(255);
+
+    noFill();
+    stroke(0);
+    strokeWeight(1);
+    rect(20,(windowHeight - rect_size_y) /4 - rect_size_y/2,rect_size_x,rect_size_y);
+
 
 
     var pen_grad = time % points_x.length;
-    if ((pen_grad == points_x.length-1 )&&(scene_2_steps != 2) ) {
-        scene_2_steps += 1;
+    image(img_edge,40,windowHeight/2 - 200);
+    noFill();
+    stroke(200);
+    strokeWeight(2);
+    beginShape();
+    for (var i = 0; i < pen_grad; i ++) {
+        vertex(points_x[i] + (windowWidth - windowWidth/2)/2,points_y[i] + 100);
     }
-    console.log(scene_2_steps%3);
+    endShape();
 
-    if(scene_2_steps%3 == 0){
-        console.log("scene2_step0");
-        fill(255,255,255);
-        noStroke();
-        rect(20,80,windowWidth-40,windowHeight - 200);
-
-        noFill();
-        stroke(200);
-        strokeWeight(2);
-        beginShape();
-        for (var i = 0; i < pen_grad; i ++) {
-            vertex(points_x[i],points_y[i]);
-        }
-        endShape();
-    }
-    else if(scene_2_steps%3 == 1){
-        console.log("scene2_step1");
-        image(img_withedge,(windowWidth - windowWidth/2)/2, windowHeight/2);
-
-        noFill();
-        stroke(200);
-        strokeWeight(2);
-        beginShape();
-        for (var i = 0; i < pen_grad; i ++) {
-            vertex(points_x[i],points_y[i]);
-        }
-        endShape();
-    }
-    else if(scene_2_steps%3 == 2){
-        console.log("scene2_step2");
-        image(img_edge,(windowWidth - windowWidth/2)/2, windowHeight/2);
-
-        noFill();
-        stroke(200);
-        strokeWeight(2);
-        beginShape();
-        for (var i = 0; i < pen_grad; i ++) {
-            vertex(points_x[i],points_y[i]);
-        }
-        endShape();
+        // noFill();
+        // stroke(200);
+        // strokeWeight(2);
+        // beginShape();
+        // for (var i = 0; i < pen_grad; i ++) {
+        //     vertex(points_x[i],points_y[i]);
+        // }
+        // endShape();
     }
 
 
@@ -196,7 +176,7 @@ function loading(deg){
         else{
             stroke(200);
         }
-        line(windowWidth/2 + cos(i*inc)*interior_r, windowHeight/2 + sin(i*inc)*interior_r,windowWidth/2 + cos(i*inc)*exterior_r, windowHeight/2 + sin(i*inc)*exterior_r,)
+        line(windowWidth/2 + cos(i*inc)*interior_r, windowHeight/2 - 300 + sin(i*inc)*interior_r,windowWidth/2 + cos(i*inc)*exterior_r, windowHeight/2 -300 + sin(i*inc)*exterior_r,)
     }
 
 }
