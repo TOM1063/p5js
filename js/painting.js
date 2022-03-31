@@ -119,7 +119,7 @@ function scene2() {
 
 
     var pen_grad = time % points_x.length;
-    if ((pen_grad == 0) && scene_2_steps != 2) {
+    if (pen_grad == 0) {
         scene_2_steps ++;
     }
     if(scene_2_steps%3 == 0){
