@@ -115,25 +115,13 @@ function scene2() {
     textAlign(CENTER, CENTER);
     text('ダレデモ画伯', windowWidth/2, 40);
 
-    fill(255,255,210);
-    stroke(50);
-    noStroke();
-    rect(10,10,windowWidth / 4, windowHeight/ 4);
-    noFill();
-    stroke(200);
-    strokeWeight(2);
-    beginShape();
-    for (var i = 0; i < points_x.length; i ++) {
-        vertex(points_x[i]/4,points_y[i]/4);
-    }
-    endShape();
 
     noFill();
     stroke(200);
     strokeWeight(2);
     beginShape();
-    var pen_grad = time % points_x.length;
-    if (pen_grad == 0) {
+    var pen_grad = time % points_x.length + 1;
+    if ((pen_grad == 0) && scene_2_steps != 2) {
         scene_2_steps ++;
     }
     if(scene_2_steps%3 == 0){
@@ -151,6 +139,20 @@ function scene2() {
     beginShape();
     for (var i = 0; i < pen_grad; i ++) {
         vertex(points_x[i],points_y[i]);
+    }
+    endShape();
+
+
+    fill(255,255,210);
+    stroke(50);
+    noStroke();
+    rect(10,10,windowWidth / 4, windowHeight/ 4);
+    noFill();
+    stroke(200);
+    strokeWeight(2);
+    beginShape();
+    for (var i = 0; i < points_x.length; i ++) {
+        vertex(points_x[i]/4,points_y[i]/4);
     }
     endShape();
 
