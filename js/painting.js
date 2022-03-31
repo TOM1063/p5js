@@ -108,6 +108,8 @@ function scene2() {
     textAlign(CENTER, CENTER);
     text('ダレデモ画伯', windowWidth/2, 40);
 
+    image(img, 100, 0);
+
     fill(255,255,210);
     stroke(50);
     noStroke();
@@ -120,7 +122,6 @@ function scene2() {
         vertex(points_x[i]/4,points_y[i]/4);
     }
     endShape();
-    image(img, 100, 0);
     
 }
 
