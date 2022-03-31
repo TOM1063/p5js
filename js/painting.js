@@ -149,7 +149,7 @@ function scene2() {
         endShape();
     }
     if(scene_2_steps&3 == 2){
-        image(img_edge,0, 100);
+        //image(img_edge,0, 100);
         background(0);
 
         noFill();
