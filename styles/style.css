@@ -24,12 +24,14 @@ header {
 .title h1{
     width:100%;
     color: black;
-    font-family:'Times New Roman', Times, serif;
     text-align: center;
     letter-spacing: 0.5rem;
     position:absolute;
     margin-top: 100px;
     font-size: 4rem;
+    font-family: vdl-logojrblack, sans-serif;
+    font-weight: 900;
+    font-style: normal;
 
 }
 
