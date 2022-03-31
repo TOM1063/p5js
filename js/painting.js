@@ -120,10 +120,12 @@ function scene2() {
 
     var pen_grad = time % points_x.length;
     if (pen_grad == points_x.length-1) {
-        scene_2_steps ++;
+        scene_2_steps += 1;
     }
+    console.log(scene_2_steps%3);
 
     if(scene_2_steps%3 == 0){
+        console.log("scene2_step0");
         fill(255,255,255);
         noStroke();
         rect(20,80,windowWidth-40,windowHeight - 200);
@@ -137,7 +139,8 @@ function scene2() {
         }
         endShape();
     }
-    else if(scene_2_steps%3 == 1){
+    else if(scene_2_steps%3 == 2){
+        console.log("scene2_step1");
         image(img_withedge,0, 100);
 
         noFill();
@@ -149,9 +152,9 @@ function scene2() {
         }
         endShape();
     }
-    else if(scene_2_steps&3 == 2){
-        //image(img_edge,0, 100);
-        background(0);
+    else if(scene_2_steps%3 == 1){
+        console.log("scene2_step2");
+        image(img_edge,0, 100);
 
         noFill();
         stroke(200);
@@ -176,10 +179,7 @@ function scene2() {
         vertex(points_x[i]/4,points_y[i]/4);
     }
     endShape();
-
     time++;
-
-    
     
 }
 
