@@ -144,6 +144,10 @@ function scene2() {
     }
     endShape();
 
+
+    img_edge.resize(rect_size_x,rect_size_y);
+    image(img_edge,20,(windowHeight - rect_size_y) /4+ rect_size_y/2 + 50);
+
     fill(0);
     noStroke();
     rect(20,(windowHeight - rect_size_y) /4 + rect_size_y/2 + 50,250,50);
@@ -158,8 +162,6 @@ function scene2() {
     stroke(0);
     strokeWeight(1);
     rect(20,(windowHeight - rect_size_y) /4 + rect_size_y/2 + 50,rect_size_x,rect_size_y);
-    img_edge.resize(rect_size_x,rect_size_y);
-    image(img_edge,20,(windowHeight - rect_size_y) /4+ rect_size_y/2 + 50);
 
         // noFill();
         // stroke(200);
