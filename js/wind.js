@@ -6,9 +6,11 @@ function setup() {
     capture = createCapture({
         audio: false,
         video: {
-            width: w,
-            height: h
-        }
+            facingMode: {
+              exact: "environment"
+            }
+          }    
+        
     }, function() {
         console.log('capture ready.')
     });
