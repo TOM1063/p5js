@@ -3,18 +3,22 @@ var w = windowWidth;
 var h = windowWidth*9/16;
 
 function setup() {
-    capture = createCapture({
+    if (isMobileDevice()) {
+        console.log("mobile device");
+        var constraints = {
         audio: false,
         video: {
             facingMode: {
-              exact: "environment"
+                exact: "environment"
             }
-          }    
-        
-    }, function() {
-        console.log('capture ready.')
-    });
-    capture.elt.setAttribute('playsinline', '');
+        }
+        };
+    capture = createCapture(constraints);
+    } else {
+        console.log("NOT mobile device");
+        capture = createCapture(VIDEO);
+    }
+
     capture.hide();
     capture.size(windowWidth, windowWidth*9/16);
     canvas = createCanvas(windowWidth, windowHeight);
@@ -25,3 +29,4 @@ function draw() {
     image(capture, 0, 0);
 
 }
+
