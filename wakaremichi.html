@@ -25,7 +25,17 @@
             </div>
         </header>
         <main>
-                <script src='js/wind.js' class="canvas"></script>
+                <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"></script>
+                <model-viewer ar
+                              src="assets/arrows_only.usdz"
+                              ios-src="assets/arrows_only.usdz"
+                              background-color="#70BCD1"
+                              style="width:800px;height:1000px;"
+                              shadow-intensity="1"
+                              camera-controls
+                              autoplay
+                              interaction-prompt="auto"
+                              auto-rotate ar magic-leap></model-viewer>
         </main>
         <footer>
             <div class="footer">
