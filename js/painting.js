@@ -16,7 +16,7 @@ var current_line_id;
 
 
 function preload(){
-    if (false){
+    if (true){
         img = loadImage("js/map.png");    //画像の読み込み
         img_withedge = loadImage("js/map_withedge.png");
         //img_edge = loadImage("js/map_edge.png");
