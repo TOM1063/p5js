@@ -12,6 +12,7 @@ var scene_2_steps;
 
 var rect_size_x;
 var rect_size_y;
+var current_line_id;
 
 
 function preload(){
@@ -22,7 +23,6 @@ function preload(){
         img_edge = loadImage("js/building2_edge.png");
     }
 }
-
 function setup() {
     rect_size_x = (windowWidth - 40);
     rect_size_y = (windowWidth - 40)*9/16;
