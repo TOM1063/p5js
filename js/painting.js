@@ -14,7 +14,7 @@ var rect_size_x;
 var rect_size_y;
 var margin;
 var current_line_id;
-var debug = false;
+var debug = true;
 
 
 function preload(){
@@ -26,9 +26,9 @@ function preload(){
     }
 }
 function setup() {
-    rect_size_x = (windowWidth - 40);
-    rect_size_y = (windowWidth - 40)*9/16;
-    margin = 150;
+    rect_size_x = (windowWidth - 100);
+    rect_size_y = (windowWidth - 100)*9/16;
+    margin = windowHeight/20;
     scene_num = 0;
     scene_2_steps = 0;
     current_line_id = 0;
@@ -215,9 +215,9 @@ function scene2() {
 
 
 
-    fill(100);
-    noStroke();
-    draw_triangle(windowWidth/2,windowHeight/2 - 70/2,200,70);
+    stroke(0);
+    strokeWeight(1);
+    draw_triangle(windowWidth/2,windowHeight/2 - 70/3,170,50);
         // noFill();
         // stroke(200);
         // strokeWeight(2);
@@ -253,5 +253,6 @@ function draw_triangle(center_x,center_y,width,height){
     vertex(center_x - width/2,center_y);
     vertex(center_x + width/2,center_y);
     vertex(center_x,center_y + height);
+    vertex(center_x - width/2,center_y);
     endShape();
 }

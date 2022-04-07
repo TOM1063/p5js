@@ -27,7 +27,7 @@ header {
     text-align: center;
     letter-spacing: 0.5rem;
     position:absolute;
-    margin-top: 100px;
+    margin-top: 2vh;
     font-size: 4rem;
     font-family: vdl-logojrblack, sans-serif;
     font-weight: 900;
@@ -82,7 +82,7 @@ footer {
     bottom: 0;
     background-color: black;
     width:100vw;
-    height:200px;
+    height:140px;
 }
 
 .infomation {
@@ -92,7 +92,6 @@ footer {
     text-align: center;
     letter-spacing: 1rem;
     position:absolute;
-    margin-top: 20px;
 }
 
 .info_text{
