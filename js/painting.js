@@ -227,7 +227,7 @@ function scene2() {
         //     vertex(points_x[i],points_y[i]);
         // }
         // endShape();
-    time ++;
+    time +=0.3;
     
 }
 
