@@ -138,7 +138,7 @@ function scene1() {
     loading(time*7,windowWidth/2,windowHeight/2-windowHeight/12);
     time += 1;
 
-    if (time >= 200){
+    if (time >= 100){
         gotoscene2();
         time = 1;
     }
