@@ -14,7 +14,7 @@ var rect_size_x;
 var rect_size_y;
 var margin;
 var current_line_id;
-var debug = true;
+var debug = false;
 
 
 function preload(){
@@ -37,7 +37,7 @@ function setup() {
     createCanvas(windowWidth,windowHeight);
     //background(70);
     button_0 = createButton('FIND VIEW');
-    button_0.position(windowWidth/2 -100 , windowHeight/2 + rect_size_y/2 );
+    button_0.position(windowWidth/2 -100 , windowHeight/2 + windowHeight/6 );
     button_0.mousePressed(gotoscene1);
     button_0.size(250,70);
     let col = color(255);
@@ -51,7 +51,7 @@ function setup() {
     noFill();
     stroke(0);
     strokeWeight(1);
-    rect(20,(windowHeight/2 - rect_size_y/2) /2 - 100,rect_size_x,rect_size_y)
+    rect(windowWidth/2 - rect_size_x/2,windowHeight/2 - rect_size_y/2-windowHeight/9,rect_size_x,rect_size_y);
     
 }
 
@@ -135,7 +135,7 @@ function scene1() {
         }
         endShape();
     }
-    loading(time*7);
+    loading(time*7,windowWidth/2,windowHeight/2-windowHeight/9);
     time += 1;
 
     if (time >= 200){
@@ -165,10 +165,12 @@ function scene2() {
 
     stroke(100);
     strokeWeight(2);
+
+    var adjust = rect_size_y/2 + margin/2 - windowHeight/9 
     for (var i = 0; i < points_x.length; i ++) {
         beginShape();
         for (var j = 0; j < points_x[i].length; j ++){
-            vertex(points_x[i][j],points_y[i][j] -(windowHeight/2 - rect_size_y/2) /2 - 100 +(windowHeight - rect_size_y) /4 - rect_size_y/2 + 190 );
+            vertex(points_x[i][j],points_y[i][j] -  adjust);
         }
         endShape();
     }
@@ -181,7 +183,7 @@ function scene2() {
         var pen_grad = time % points_x[i].length;
         beginShape();
         for(j = 0; j < pen_grad; j ++){
-            vertex(points_x[i][j],points_y[i][j] -(windowHeight/2 - rect_size_y/2) /2 - 100 +(windowHeight - rect_size_y) /4 - rect_size_y/2 + 190 );
+            vertex(points_x[i][j],points_y[i][j]  -  adjust);
         }
         endShape();
         //console.log("drawed_line:" + str(i));
@@ -189,7 +191,7 @@ function scene2() {
 
     if(debug != true){
         img_edge.resize(rect_size_x,rect_size_y);
-        image(img_edge,20,(windowHeight - rect_size_y) /4+ rect_size_y/2 + 50);
+        image(img_edge,windowWidth/2 - rect_size_x/2,windowHeight/2 + margin/2);
     }
 
     fill(0);
@@ -226,7 +228,7 @@ function scene2() {
     
 }
 
-function loading(deg){
+function loading(deg,center_x,center_y){
     strokeWeight(10);
     var interior_r = 50;
     var exterior_r = 80;
@@ -239,7 +241,7 @@ function loading(deg){
         else{
             stroke(200);
         }
-        line(windowWidth/2 + cos(i*inc)*interior_r, windowHeight/2 - 300 + sin(i*inc)*interior_r,windowWidth/2 + cos(i*inc)*exterior_r, windowHeight/2 -300 + sin(i*inc)*exterior_r,)
+        line(center_x + cos(i*inc)*interior_r, center_y + sin(i*inc)*interior_r,center_x + cos(i*inc)*exterior_r, center_y + sin(i*inc)*exterior_r,)
     }
 
 }
