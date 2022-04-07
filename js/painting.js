@@ -76,7 +76,6 @@ function mousePressed(){
             console.log("hidden_button_is_clicked");
             gotoscene0();
         }
-
     }
 }
 
@@ -129,10 +128,10 @@ function gotoscene0() {
     console.log("lines_initialized");
     background(255);
     console.log("gotoscene0");
-    if(image_num = 1){
+    if(image_num == 1){
         image_num = 2;
     }
-    else if(image_num = 2) {
+    else if(image_num == 2) {
         image_num = 1;
     }
     scene_num = 0;
