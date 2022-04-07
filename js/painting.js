@@ -14,7 +14,7 @@ var rect_size_x;
 var rect_size_y;
 var margin;
 var current_line_id;
-var debug = true;
+var debug = false;
 
 var image_num;
 
