@@ -41,7 +41,6 @@ main {
     height: 100vh;
     width:100vw;
     margin-top:200px;
-
 }
 
 .background{
@@ -50,25 +49,24 @@ main {
 }
 
 .links {
-    width:20rem;
+    width:40rem;
     height: 100%;
     text-align: center;
     margin:auto;
     margin-top:20rem;
     display:block;
-    font-size: 7reml;
+    font-size: 7rem;
 }
 
 .links  a{
     display: block;
-    margin-top: 1rem;;
+    margin-top: 2rem;
     text-decoration: none;
     color:white;
-    font-size: 7reml;
-
+    font-size: 2rem;
     background-color: black;
     width:100%;
-    height:3rem;
+    height:6rem;
     text-align: center;
 }
 
