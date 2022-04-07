@@ -204,8 +204,9 @@ function scene2() {
     textAlign(CENTER, CENTER);
     text('Result', windowWidth/2 - rect_size_x/2 + 250/2,windowHeight/2 + margin/2 + 50/2);
     fill(0);
-    text('Site : Chiyoda-Ku Tokyo',windowWidth/2,windowHeight/2 + margin/2 + 50/2);
-    fill(255,255 - 120*(time*4%255 > 127),255- 255*(time*4%255 > 127));
+    text('Site : Chiyoda-Ku Tokyo',windowWidth/2+20,windowHeight/2 + margin/2 + 50/2);
+    //fill(255,255 - 120*(time*4%255 > 127),255- 255*(time*4%255 > 127));
+    fill(255 - 255*(time*4%255 > 127))
     text('70% Matching',windowWidth/2 + rect_size_x/2 - 110,windowHeight/2 + margin/2 + 50/2);
 
     noFill();
@@ -214,9 +215,9 @@ function scene2() {
     rect(windowWidth/2 - rect_size_x/2,windowHeight/2 + margin/2,rect_size_x,rect_size_y);
 
 
-
-    stroke(0);
-    strokeWeight(1);
+    fill(220);
+    noStroke();
+    //trokeWeight(1);
     draw_triangle(windowWidth/2,windowHeight/2 - 70/3,170,50);
         // noFill();
         // stroke(200);
