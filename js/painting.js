@@ -16,7 +16,7 @@ var current_line_id;
 
 
 function preload(){
-    if (true){
+    if (false){
         img = loadImage("js/map.png");    //画像の読み込み
         img_withedge = loadImage("js/map_withedge.png");
         //img_edge = loadImage("js/map_edge.png");
@@ -28,6 +28,9 @@ function setup() {
     rect_size_y = (windowWidth - 40)*9/16;
     scene_num = 0;
     scene_2_steps = 0;
+    current_line_id = 0;
+    points_x[current_line_id] = [];
+    points_y[current_line_id] = [];
     createCanvas(windowWidth,windowHeight);
     //background(70);
     button_0 = createButton('FIND VIEW');
@@ -49,6 +52,29 @@ function setup() {
     
 }
 
+
+
+function mousePressed(){
+    points_x[current_line_id] = [];
+    points_y[current_line_id] = [];
+    console.log("current_line_id changed to" + str(current_line_id));
+}
+
+function mouseDragged() {
+    mouse_x = mouseX;
+    mouse_y = mouseY;
+    if (scene_num == 0) {
+        points_x[current_line_id].push(mouse_x);
+        points_y[current_line_id].push(mouse_y);
+    }
+}
+function mouseReleased(){
+    current_line_id += 1;
+}
+
+
+
+
 function draw() {
     if (scene_num == 0) {
         scene0();
@@ -61,14 +87,8 @@ function draw() {
     }
 }
 
-function mouseDragged() {
-    mouse_x = mouseX;
-    mouse_y = mouseY;
-    if (scene_num == 0) {
-        points_x.push(mouse_x);
-        points_y.push(mouse_y);
-    }
-}
+
+
 
 function gotoscene1() {
     scene_num = 1;
@@ -89,11 +109,13 @@ function scene0() {
     noFill();
     stroke(50);
     strokeWeight(2);
-    beginShape();
     for (var i = 0; i < points_x.length; i ++) {
-        vertex(points_x[i],points_y[i]);
+        beginShape();
+        for (var j = 0; j < points_x[i].length; j ++){
+            vertex(points_x[i][j], points_y[i][j]);
+        }
+        endShape();
     }
-    endShape();
     fill(50);
     circle(mouse_x,mouse_y,1);
 }
@@ -103,11 +125,13 @@ function scene1() {
     noFill();
     stroke(200);
     strokeWeight(2);
-    beginShape();
     for (var i = 0; i < points_x.length; i ++) {
-        vertex(points_x[i],points_y[i]);
+        beginShape();
+        for (var j = 0; j < points_x[i].length; j ++){
+            vertex(points_x[i][j], points_y[i][j]);
+        }
+        endShape();
     }
-    endShape();
     loading(time*7);
     time += 1;
 
@@ -137,16 +161,17 @@ function scene2() {
     strokeWeight(1);
     rect(20,(windowHeight - rect_size_y) /4 - rect_size_y/2,rect_size_x,rect_size_y);
 
-
-    var pen_grad = time % points_x.length;
     noFill();
     stroke(200);
     strokeWeight(2);
-    beginShape();
-    for (var i = 0; i < pen_grad; i ++) {
-        vertex(points_x[i],points_y[i] -(windowHeight/2 - rect_size_y/2) /2 - 100 +(windowHeight - rect_size_y) /4 - rect_size_y/2 + 190 );
+    for (var i = 0; i < points_x.length; i ++){
+        var pen_grad = time % points_x[i].length;
+        beginShape();
+        for(j = 0; j < pen_grad; j ++){
+            vertex(points_x[i][j],points_y[i][j] -(windowHeight/2 - rect_size_y/2) /2 - 100 +(windowHeight - rect_size_y) /4 - rect_size_y/2 + 190 );
+        }
+        endShape();
     }
-    endShape();
 
 
     img_edge.resize(rect_size_x,rect_size_y);
