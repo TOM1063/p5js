@@ -160,7 +160,7 @@ function scene2() {
 
     noFill();
     stroke(0);
-    strokeWeight(1.5);
+    strokeWeight(1.8);
     rect(windowWidth/2 - rect_size_x/2,windowHeight/2 - margin/2 - rect_size_y,rect_size_x,rect_size_y);
 
     stroke(100);
