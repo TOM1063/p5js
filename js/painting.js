@@ -51,7 +51,7 @@ function setup() {
     noFill();
     stroke(0);
     strokeWeight(1);
-    rect(windowWidth/2 - rect_size_x/2,windowHeight/2 - rect_size_y/2-windowHeight/9,rect_size_x,rect_size_y);
+    rect(windowWidth/2 - rect_size_x/2,windowHeight/2 - rect_size_y/2-windowHeight/12,rect_size_x,rect_size_y);
     
 }
 
@@ -135,7 +135,7 @@ function scene1() {
         }
         endShape();
     }
-    loading(time*7,windowWidth/2,windowHeight/2-windowHeight/9);
+    loading(time*7,windowWidth/2,windowHeight/2-windowHeight/12);
     time += 1;
 
     if (time >= 200){
@@ -166,7 +166,7 @@ function scene2() {
     stroke(100);
     strokeWeight(2);
 
-    var adjust = rect_size_y/2 + margin/2 - windowHeight/9 
+    var adjust = rect_size_y/2 + margin/2 - windowHeight/12
     for (var i = 0; i < points_x.length; i ++) {
         beginShape();
         for (var j = 0; j < points_x[i].length; j ++){
