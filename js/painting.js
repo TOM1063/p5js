@@ -12,11 +12,13 @@ var scene_2_steps;
 
 var rect_size_x;
 var rect_size_y;
+var margin;
 var current_line_id;
+var debug = true;
 
 
 function preload(){
-    if (true){
+    if (debug != true){
         img = loadImage("js/map.png");    //画像の読み込み
         img_withedge = loadImage("js/map_withedge.png");
         //img_edge = loadImage("js/map_edge.png");
@@ -26,6 +28,7 @@ function preload(){
 function setup() {
     rect_size_x = (windowWidth - 40);
     rect_size_y = (windowWidth - 40)*9/16;
+    margin = 150;
     scene_num = 0;
     scene_2_steps = 0;
     current_line_id = 0;
@@ -147,23 +150,33 @@ function scene2() {
     button_0.position(1000000,1000000);
     fill(0);
     noStroke();
-    rect(20,(windowHeight - rect_size_y) /4 - rect_size_y/2,250,50);
+    rect(windowWidth/2 - rect_size_x/2,windowHeight/2 - margin/2 - rect_size_y,250,50);
     fill(255);
     noStroke();
     textSize(30);
     textFont("Sawarabi Mincho");
     textAlign(CENTER, CENTER);
-    text
-    text('Your Drawing', 140, (windowHeight - rect_size_y) /4 - rect_size_y/2 + 25);
+    text('Your Drawing', windowWidth/2 - rect_size_x/2 + 125,windowHeight/2 - margin/2 - rect_size_y + 25);
 
     noFill();
     stroke(0);
-    strokeWeight(1);
-    rect(20,(windowHeight - rect_size_y) /4 - rect_size_y/2,rect_size_x,rect_size_y);
+    strokeWeight(1.5);
+    rect(windowWidth/2 - rect_size_x/2,windowHeight/2 - margin/2 - rect_size_y,rect_size_x,rect_size_y);
+
+    stroke(100);
+    strokeWeight(2);
+    for (var i = 0; i < points_x.length; i ++) {
+        beginShape();
+        for (var j = 0; j < points_x[i].length; j ++){
+            vertex(points_x[i][j],points_y[i][j] -(windowHeight/2 - rect_size_y/2) /2 - 100 +(windowHeight - rect_size_y) /4 - rect_size_y/2 + 190 );
+        }
+        endShape();
+    }
+    
 
     noFill();
-    stroke(200);
-    strokeWeight(2);
+    stroke(100);
+    strokeWeight(4);
     for (var i = 0; i < points_x.length; i ++){
         var pen_grad = time % points_x[i].length;
         beginShape();
@@ -171,29 +184,36 @@ function scene2() {
             vertex(points_x[i][j],points_y[i][j] -(windowHeight/2 - rect_size_y/2) /2 - 100 +(windowHeight - rect_size_y) /4 - rect_size_y/2 + 190 );
         }
         endShape();
+        //console.log("drawed_line:" + str(i));
     }
 
-
-    img_edge.resize(rect_size_x,rect_size_y);
-    image(img_edge,20,(windowHeight - rect_size_y) /4+ rect_size_y/2 + 50);
+    if(debug != true){
+        img_edge.resize(rect_size_x,rect_size_y);
+        image(img_edge,20,(windowHeight - rect_size_y) /4+ rect_size_y/2 + 50);
+    }
 
     fill(0);
     noStroke();
-    rect(20,(windowHeight - rect_size_y) /4 + rect_size_y/2 + 50,250,50);
+    rect(windowWidth/2 - rect_size_x/2,windowHeight/2 + margin/2,250,50);
     fill(255);
     noStroke();
     textSize(30);
     textFont("Sawarabi Mincho");
     textAlign(CENTER, CENTER);
-    text('Result', 140,(windowHeight - rect_size_y) /4 + rect_size_y/2 + 50 + 25);
+    text('Result', windowWidth/2 - rect_size_x/2 + 250/2,windowHeight/2 + margin/2 + 50/2);
     fill(0);
-    text('Site : Chiyoda-Ku Tokyo    70% Matching', 600,(windowHeight - rect_size_y) /4 + rect_size_y/2 + 50 + 25);
+    text('Site : Chiyoda-Ku Tokyo    70% Matching',windowWidth/2 + 100,windowHeight/2 + margin/2 + 50/2);
 
     noFill();
     stroke(0);
     strokeWeight(1);
-    rect(20,(windowHeight - rect_size_y) /4 + rect_size_y/2 + 50,rect_size_x,rect_size_y);
+    rect(windowWidth/2 - rect_size_x/2,windowHeight/2 + margin/2,rect_size_x,rect_size_y);
 
+
+
+    fill(255 - (time*4%255 > 127)*255);
+    noStroke();
+    draw_triangle(windowWidth/2,windowHeight/2 - 70/2,200,70);
         // noFill();
         // stroke(200);
         // strokeWeight(2);
@@ -202,9 +222,7 @@ function scene2() {
         //     vertex(points_x[i],points_y[i]);
         // }
         // endShape();
-    if(pen_grad < points_x.length){
-        time ++;
-    }
+    time ++;
     
 }
 
@@ -224,4 +242,12 @@ function loading(deg){
         line(windowWidth/2 + cos(i*inc)*interior_r, windowHeight/2 - 300 + sin(i*inc)*interior_r,windowWidth/2 + cos(i*inc)*exterior_r, windowHeight/2 -300 + sin(i*inc)*exterior_r,)
     }
 
+}
+
+function draw_triangle(center_x,center_y,width,height){
+    beginShape();
+    vertex(center_x - width/2,center_y);
+    vertex(center_x + width/2,center_y);
+    vertex(center_x,center_y + height);
+    endShape();
 }
