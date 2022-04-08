@@ -35,6 +35,38 @@ header {
     font-style: normal;
     
 }
+@media screen and (min-width:800px) and ( max-width:1000px){ 
+    /*　画面サイズが480pxからはここを読み込む　*/
+    .title h1{
+        width:100%;
+        color: black;
+        text-align: center;
+        letter-spacing: 0.5rem;
+        position:absolute;
+        margin-top: 6vh;
+        font-size: 6rem;
+        font-family: vdl-logojrblack, sans-serif;
+        font-weight: 900;
+        font-style: normal;
+        
+    }
+}
+@media screen and (min-height:1000px) { 
+    /*　画面サイズが480pxからはここを読み込む　*/
+    .title h1{
+        width:100%;
+        color: black;
+        text-align: center;
+        letter-spacing: 0.5rem;
+        position:absolute;
+        margin-top: 1vh;
+        font-size: 6rem;
+        font-family: vdl-logojrblack, sans-serif;
+        font-weight: 900;
+        font-style: normal;
+        
+    }
+}
 
 
 main {

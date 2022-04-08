@@ -18,6 +18,9 @@ var debug = false;
 
 var image_num;
 
+let result_text;
+let result_percentage;
+
 
 function preload(){
     if (debug != true){
@@ -118,6 +121,7 @@ function gotoscene1() {
 }
 function gotoscene2() {
     scene_num = 2;
+    result_percentage= Math.round(random(60,80));
 }
 function gotoscene0() {
     console.log("gotoscene0_setting");
@@ -268,10 +272,19 @@ function scene2() {
     textAlign(CENTER, CENTER);
     text('Result', windowWidth/2 - rect_size_x/2 + 250/2,windowHeight/2 + margin/2 + 50/2);
     fill(0);
-    text('Site : Chiyoda-Ku Tokyo',windowWidth/2+20,windowHeight/2 + margin/2 + 50/2);
+    if(image_num == 0){
+        result_text = 'Site : Chiyoda-Ku Tokyo';
+    }
+    else if(image_num == 1){
+        result_text = 'Site : Minato-Ku Tokyo';
+    }
+    else if(image_num == 1){
+        result_text = 'Site : Minato-Ku Tokyo';
+    }
+    text(result_text,windowWidth/2+20,windowHeight/2 + margin/2 + 50/2);
     //fill(255,255 - 120*(time*4%255 > 127),255- 255*(time*4%255 > 127));
-    fill(255 - 255*(time*4%255 > 127))
-    text('70% Matching',windowWidth/2 + rect_size_x/2 - 110,windowHeight/2 + margin/2 + 50/2);
+    fill(255 - 255*(time*10%255 > 127))
+    text(result_percentage + '% Matching',windowWidth/2 + rect_size_x/2 - 110,windowHeight/2 + margin/2 + 50/2);
 
     noFill();
     stroke(0);
