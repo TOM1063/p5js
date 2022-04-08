@@ -1,7 +1,7 @@
 let obj_model;
 
 function preload() {
-    obj_model = loadModel('dem.obj');
+    obj_model = loadModel('js/em.obj');
 }
 
 
