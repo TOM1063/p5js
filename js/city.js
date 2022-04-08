@@ -18,7 +18,7 @@ function draw() {
     background(0);
     //rotateX(frameCount * 0.005);
     rotateX(3.14*45/180);
-    rotateZ(frameCount * 0.005);
+    rotateZ(frameCount * 0.002);
     noFill();
     stroke(255,255,255,10);
     strokeWeight(1);
