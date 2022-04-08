@@ -152,9 +152,9 @@ main {
     width:50vw;
     height:50vw;
     border-radius:50%;
-    background-image: url("../data/jacket_red.png");
+    background-image: url("../data/jacket_red_big.png");
     background-position: -10px,10px;
-    background-size: 50vw;
+    background-size: 60vw;
     border: 6px solid white;
     outline-offset: -6px;
     animation: rotate-anime 10s linear infinite;
