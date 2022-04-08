@@ -1,7 +1,7 @@
 let obj_model;
 
 function preload() {
-    obj_model = loadModel('js/bldg.obj');
+    obj_model = loadModel('js/assets/bldg.obj');
 }
 
 
