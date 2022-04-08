@@ -139,6 +139,7 @@ function gotoscene0() {
         image_num = 1;
     }
     scene_num = 0;
+    time = 0;
 }
 
 function scene0() {
