@@ -209,17 +209,19 @@ main {
 .city_viewer {
     width:100vw;
     height:50vh;
+    z-index: 0;
 }
 .city_viewer_container {
     width:100%;
     height:100%;
+    z-index: 0;
 }
 
 .city_viewer_container_background {
     width:100%;
     height:100%;
     background-color: black;
-    z-index: 80;
+    z-index: 0;
 }
 .background{
     height:100%;
