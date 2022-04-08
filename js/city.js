@@ -10,13 +10,15 @@ function setup() {
 }
 
 function draw() {
+    console.log("stard draw");
     background(0);
     rotateX(frameCount * 0.01);
     rotateY(frameCount * 0.01);
-    model(obj_model);
     noFill();
     stroke(255);
     strokeWeight(2);
+    model(obj_model);
+    console.log("model_show");
     //sphere(300);
 
 }
