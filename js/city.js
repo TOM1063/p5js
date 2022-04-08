@@ -20,7 +20,7 @@ function draw() {
     rotateX(3.14*10/180);
     rotateZ(frameCount * 0.005);
     noFill();
-    stroke(255,255,255,100);
+    stroke(255,255,255,10);
     strokeWeight(1);
     //sphere(300);
     model(obj_model);
