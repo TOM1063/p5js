@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang = "ja">
+    <head>
+        <meta charset = "UTF-8">
+        <script src="https://cdn.jsdelivr.net/npm/p5@1.3.1/lib/p5.js"></script>
+        <link href="https://fonts.googleapis.com/earlyaccess/sawarabimincho.css" rel="stylesheet" />
+        <link href="styles/style_music.css" rel="stylesheet" type="text/css" media="all">
+        <title>music</title>
+        <script>
+            (function(d) {
+              var config = {
+                kitId: 'tnu2iwz',
+                scriptTimeout: 3000,
+                async: true
+              },
+              h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+            })(document);
+          </script>
+    </head>
+
+    <body>
+        <header>
+            <div class="header_container">
+                <div class="menu">
+                    <img src="data/menu.png">
+                </div>
+                <div class="title">
+                    <h1>PLATEAU MUSIC</h1>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class ="player">
+                <div class ="player_container">
+                    <div class="music_info">
+                        <div class="music_name">
+                            <h1>Data Stream</h1>
+                        </div>
+                        <div class="artist_name">
+                            <p>Unpredictable</p>
+                        </div>
+                    </div>
+                    <div class="UI">
+                        <div class ="button_back button">
+                            <img src="data/button_back.png">
+                        </div>
+                        <div class ="button_stop button">
+                            <img src="data/button_stop.png">
+                        </div>
+                        <div class ="button_forward button">
+                            <img src="data/button_forward.png">
+                        </div>
+                    </div>
+                    <div class="record">
+                        <div class="record_container">
+                            <div class="record_circle">
+                                <div class="record_img">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="city_viewer">
+                        
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="footer">
+                <div class="infomation">
+                    <div class="info_text">
+                        <p>Made With Plateau</p>
+                    </div>
+                    <div class="plateau_icon">
+                        <img src="data/plateau_icon.png">
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>

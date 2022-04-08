@@ -1,0 +1,230 @@
+
+html {
+    /* position: fixed; */
+    top: 0;
+    margin:0;
+    padding:0;
+    overflow: hidden;
+}
+body {
+    position: fixed;
+    background-color: white;
+    margin:0;
+    padding:0;
+}
+
+
+/* ---------------------------header--------------------- */
+header {
+    height: 180px;
+    width:100vw;
+}
+.header_container {
+    width: 85vw;
+    height:140px;
+    margin:auto;
+    margin-top:20px;
+}
+
+.menu {
+    float: left;
+}
+
+.menu img {
+    opacity: 0.5;
+    width: 5rem;
+    height:auto;
+    margin-top: 40px;
+}
+
+.title {
+    float: right;
+}
+
+.title h1{
+    color: rgb(163, 163, 163);
+    text-align: center;
+    letter-spacing: 0.5rem;
+    /* position:absolute; */
+    font-size: 3rem;
+    font-family: vdl-logojrblack, sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    
+}
+
+/* ---------------------------main--------------------- */
+main {
+    width:100vw;
+}
+
+.player {
+    height:40vh;
+}
+.player_container {
+    width: 60vw;
+    height:100%;
+    margin:auto;
+    margin-top:5vh;
+
+}
+.music_info {
+    height:200px;
+
+}
+.music_name {
+    color:rgb(88, 88, 88);
+    text-align: center;
+    font-size: 2.5rem;
+    height:100px;
+    
+}
+.artist_name {
+    color:rgb(163, 163, 163);
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 1rem;
+}
+.artist_name p{
+    margin-top: 0;
+}
+
+
+
+
+
+.UI {
+    height:100px;
+    width:40vw;
+    margin:auto;
+    margin-top: 3rem;
+}
+
+.button {
+    width: 70px;
+    height:70px;
+}
+.button img {
+    width:100%;
+    height:auto;
+    opacity: 0.8;
+}
+.button_back {
+    float:left;
+}
+.button_stop {
+    float:left;
+    margin-left:8.5vw;
+}
+
+.button_forward {
+    float:right;
+}
+
+
+
+
+.record {
+    height:300px;
+    width:100%;
+    margin:auto;
+    margin-top: 3rem;
+
+}
+.record_container {
+
+}
+
+.record_circle {
+    width:50vw;
+    height:50vw;
+    border-radius:50%;
+    margin:auto;
+    box-shadow: 0 20px 25px 0 rgba(0, 0, 0, .5);
+}
+
+.record_img {
+    width:100%;
+    height:100%;
+    border-radius:50%;
+    background-image: url("../data/jacket.png");
+    background-position: -50px,50px;
+    background-size: 80vw;
+    margin:auto;
+    border: solid 6px white;
+    animation: rotate-anime 10s linear infinite;
+
+}
+@keyframes rotate-anime {
+    0%  {transform: rotate(0);}
+    100%  {transform: rotate(360deg);}
+  }
+
+.background{
+    height:100%;
+    width:100%;
+}
+
+.links {
+    width:40rem;
+    height: 100%;
+    text-align: center;
+    margin:auto;
+    margin-top:20rem;
+    display:block;
+    font-size: 7rem;
+}
+
+.links  a{
+    display: block;
+    margin-top: 2rem;
+    text-decoration: none;
+    color:white;
+    font-size: 2rem;
+    background-color: black;
+    width:100%;
+    height:6rem;
+    text-align: center;
+}
+
+.canvas {
+    width:100vw;
+    height: auto;
+}
+
+
+/* ---------------------------footer--------------------- */
+
+footer {
+    position: fixed;
+    bottom: 0;
+    background-color: black;
+    width:100vw;
+    height:140px;
+    z-index: 10;
+}
+
+.infomation {
+    color: white;
+    font-size: 2rem;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    letter-spacing: 1rem;
+    position:absolute;
+}
+
+.info_text{
+    float: left;
+    margin-left: 35vw;
+    width:320px;
+}
+
+.plateau_icon{
+    float: left;
+}
+
+.plateau_icon img{
+    width: 6rem;
+    height:auto;
+    margin-top:10px;
+}
