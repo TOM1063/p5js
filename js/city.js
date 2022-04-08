@@ -17,8 +17,9 @@ function draw() {
     noFill();
     stroke(255);
     strokeWeight(2);
-    model(obj_model);
+    sphere(300);
+    //model(obj_model);
     console.log("model_show");
-    //sphere(300);
+    //
 
 }
