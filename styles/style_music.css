@@ -156,7 +156,7 @@ main {
     background-image: url("../data/jacket.png");
     background-position: -50px,50px;
     background-size: 80vw;
-    outline: 6px solid white;
+    border: 6px solid white;
     outline-offset: -6px;
     animation: rotate-anime 10s linear infinite;
 
@@ -181,7 +181,7 @@ main {
 .triangle{
 	width:50vw;
 	height:50vw;
-    margin:auto;
+    margin-left:25.7vw;
     
 	/* border-right:300px solid transparent;
 	border-left:300px solid transparent;
