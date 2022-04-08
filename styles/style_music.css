@@ -85,6 +85,7 @@ main {
 
 .music_info {
     height:170px;
+    margin-top:10vh;
 
 }
 .music_name {
@@ -112,7 +113,7 @@ main {
     height:100px;
     width:40vw;
     margin:auto;
-    margin-top: 3rem;
+    margin-top: 1.3vh;
 }
 
 .button {
@@ -143,7 +144,7 @@ main {
     height:400px;
     width:100vw;
     margin:auto;
-    margin-top: 3rem;
+    margin-top: 1.7vh;
     position: relative;
 
 }
