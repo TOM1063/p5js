@@ -24,6 +24,7 @@ function preload(){
         //img = loadImage("js/map.png");    //画像の読み込み
         //img_withedge = loadImage("js/map_withedge.png");
         //img_edge = loadImage("js/map_edge.png");
+        img_edge_0 = loadImage("js/bldg_0_edge.png");
         img_edge_1 = loadImage("js/bldg_1_edge.png");
         img_edge_2 = loadImage("js/bldg_2_edge.png");
     }
@@ -132,6 +133,9 @@ function gotoscene0() {
         image_num = 2;
     }
     else if(image_num == 2) {
+        image_num = 3;
+    }
+    else if(image_num == 3) {
         image_num = 1;
     }
     scene_num = 0;
@@ -239,13 +243,18 @@ function scene2() {
 
     if(debug != true){
         if(image_num == 1){
+            img_edge_0.resize(rect_size_x,rect_size_y);
+            image(img_edge_0,windowWidth/2 - rect_size_x/2,windowHeight/2 + margin/2);
+        }
+        else if(image_num == 2){
             img_edge_1.resize(rect_size_x,rect_size_y);
             image(img_edge_1,windowWidth/2 - rect_size_x/2,windowHeight/2 + margin/2);
         }
-        else if(image_num == 2){
+        else if(image_num == 3){
             img_edge_2.resize(rect_size_x,rect_size_y);
             image(img_edge_2,windowWidth/2 - rect_size_x/2,windowHeight/2 + margin/2);
         }
+        
     }
 
     fill(0);
