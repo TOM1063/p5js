@@ -9,15 +9,17 @@ function setup() {
     console.log("obj loaded");
     let canvas = createCanvas(windowWidth, windowHeight/2, WEBGL);
     canvas.parent(result); 
+    rotateX(200);
     
 
 }
+
 
 function draw() {
     console.log("stard draw");
     background(0);
     //rotateX(frameCount * 0.005);
-    rotateY(frameCount * 0.005);
+    rotateZ(frameCount * 0.005);
     noFill();
     stroke(255,255,255);
     strokeWeight(1);
