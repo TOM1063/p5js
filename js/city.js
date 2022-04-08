@@ -2,7 +2,7 @@ let obj_model;
 
 
 function setup() {
-    obj_model = loadModel('assets/bldg.obj');
+    obj_model = loadModel('assets/brid.obj');
     console.log("obj loaded");
     createCanvas(windowWidth, windowHeight/2, WEBGL);
     
