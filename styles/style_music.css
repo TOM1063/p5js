@@ -69,11 +69,11 @@ main {
     width: 100vw;
     height:100%;
     margin:auto;
-    margin-top:5vh;
+    margin-top:4vh;
 
 }
 .music_info {
-    height:200px;
+    height:170px;
 
 }
 .music_name {
@@ -129,7 +129,7 @@ main {
 
 
 .record {
-    height:300px;
+    height:400px;
     width:100vw;
     margin:auto;
     margin-top: 3rem;
@@ -138,21 +138,21 @@ main {
 }
 .record_container {
     position: relative;
-    height:100%;
+    height:400px;
 }
 
 
 .record_circle {
-    width:50vw;
-    height:50vw;
+    width:60vw;
+    height:60vw;
     border-radius:50%;
     margin:auto;
     box-shadow: 0 20px 25px 0 rgba(0, 0, 0, .5);
 }
 
 .record_img {
-    width:50vw;
-    height:50vw;
+    width:60vw;
+    height:60vw;
     border-radius:50%;
     background-image: url("../data/jacket_red_big.png");
     background-position: -10px,10px;
