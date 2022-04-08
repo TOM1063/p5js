@@ -7,7 +7,7 @@ function preload() {
 
 function setup() {
     console.log("obj loaded");
-    createCanvas(windowWidth, windowHeight/2, WEBGL);
+    let canvas = createCanvas(windowWidth, windowHeight/2, WEBGL);
     canvas.parent(result); 
     
 
