@@ -16,7 +16,7 @@ function setup() {
 function draw() {
     console.log("stard draw");
     background(0);
-    rotateX(frameCount * 0.005);
+    //rotateX(frameCount * 0.005);
     rotateY(frameCount * 0.005);
     noFill();
     stroke(255,255,255);

@@ -133,7 +133,6 @@ main {
     width:100vw;
     margin:auto;
     margin-top: 3rem;
-    z-index: 40;
     position: relative;
 
 }
@@ -175,6 +174,7 @@ main {
     z-index: 100;
     background-color: transparent;
     z-index: 60;
+    /* position: relative; */
 }
 
 
