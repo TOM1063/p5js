@@ -1,8 +1,11 @@
 let obj_model;
 
+function preload() {
+    obj_model = loadModel('assets/bldg.obj');
+}
+
 
 function setup() {
-    obj_model = loadModel('assets/brid.obj');
     console.log("obj loaded");
     createCanvas(windowWidth, windowHeight/2, WEBGL);
     
@@ -17,8 +20,8 @@ function draw() {
     noFill();
     stroke(255);
     strokeWeight(2);
-    sphere(300);
-    //model(obj_model);
+    //sphere(300);
+    model(obj_model);
     console.log("model_show");
     //
 
