@@ -24,8 +24,8 @@ function preload(){
         img = loadImage("js/map.png");    //画像の読み込み
         img_withedge = loadImage("js/map_withedge.png");
         //img_edge = loadImage("js/map_edge.png");
-        img_edge_1 = loadImage("js/building1_edge.png");
-        img_edge_2 = loadImage("js/building2_edge.jpg");
+        img_edge_1 = loadImage("js/building_1_edge.png");
+        img_edge_2 = loadImage("js/building_2_edge.png");
     }
 }
 function setup() {
