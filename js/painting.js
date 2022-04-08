@@ -21,11 +21,11 @@ var image_num;
 
 function preload(){
     if (debug != true){
-        img = loadImage("js/map.png");    //画像の読み込み
-        img_withedge = loadImage("js/map_withedge.png");
+        //img = loadImage("js/map.png");    //画像の読み込み
+        //img_withedge = loadImage("js/map_withedge.png");
         //img_edge = loadImage("js/map_edge.png");
-        img_edge_1 = loadImage("js/building_1_edge.png");
-        img_edge_2 = loadImage("js/building_2_edge.png");
+        img_edge_1 = loadImage("js/bldg_1_edge.png");
+        img_edge_2 = loadImage("js/bldg_2_edge.png");
     }
 }
 function setup() {
