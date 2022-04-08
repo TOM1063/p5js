@@ -133,10 +133,11 @@ main {
     width:100%;
     margin:auto;
     margin-top: 3rem;
+    z-index: 40;
+    position: relative;
 
 }
 .record_container {
-
 }
 
 .record_circle {
@@ -167,15 +168,52 @@ main {
 
 
 
+.indicator {
+    height:0;
+    width:100vw;
+    z-index: 100;
+    background-color: transparent;
+    z-index: 60;
+}
+
+
+.triangle{
+	width:50vw;
+	height:50vw;
+    margin:auto;
+    
+	/* border-right:300px solid transparent;
+	border-left:300px solid transparent;
+	border-top:300px solid rgb(255, 0, 0);
+    margin:auto;
+    z-index: 100; */
+  }
+.triangle img {
+    width: 100%;
+    height:100%;
+    opacity:0.5;
+}
+
+
+
 
 
 
 .city_viewer {
     width:100vw;
     height:50vh;
-    background-color: black;
+}
+.city_viewer_container {
+    width:100%;
+    height:100%;
 }
 
+.city_viewer_container_background {
+    width:100%;
+    height:100%;
+    background-color: black;
+    z-index: 80;
+}
 .background{
     height:100%;
     width:100%;
