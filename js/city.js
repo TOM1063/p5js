@@ -23,6 +23,7 @@ function draw() {
     stroke(255,255,255,10);
     strokeWeight(0.5);
     scale(2);
+    translate(0,0,-50);
     //sphere(300);
     model(obj_model);
     //
