@@ -17,7 +17,7 @@ function setup() {
 function draw() {
     background(0);
     //rotateX(frameCount * 0.005);
-    rotateX(20);
+    rotateX(10);
     rotateZ(frameCount * 0.005);
     noFill();
     stroke(255,255,255);
