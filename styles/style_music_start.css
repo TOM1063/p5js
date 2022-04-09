@@ -13,28 +13,12 @@ body {
     padding:0;
 }
 header {
-    position: fixed;
-    height: 180px;
+    /* position: fixed; */
+    height: 400px;
     width:100vw;
     margin-top:30vh;
 }
 
-.anim-box.slidein.is-animated{
-    animation: slideIn 1s cubic-bezier(0.25, 1, 0.5, 1) 1 forwards;
-}
-
-@keyframes slideIn {
-    0% {
-        transform: translateX(180px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateX(0);
-    }
-    40%,100% {
-        opacity: 1;
-    }
-}
 
 .title {
     
@@ -42,7 +26,7 @@ header {
 
 .title h1{
     width:100%;
-    color: rgb(112, 171, 223);
+    color: rgb(38, 173, 175);
     text-align: center;
     letter-spacing: 0.5rem;
     position:absolute;
@@ -51,18 +35,28 @@ header {
     font-family: vdl-logojrblack, sans-serif;
     font-weight: 900;
     font-style: normal;
+    opacity: 0;
+	animation: fadein-anim 2s linear forwards;
     
 }
+
+@keyframes fadein-anim {
+	100% {
+		opacity: 1;
+	}
+}
+
+
 @media screen and (min-width:800px) and ( max-width:1000px){ 
     /*　画面サイズが480pxからはここを読み込む　*/
     .title h1{
         width:100%;
-        color: rgb(112, 171, 223);
+        color: rgb(38, 173, 175);
         text-align: center;
         letter-spacing: 0.5rem;
         position:absolute;
         margin-top: 6vh;
-        font-size: 6rem;
+        font-size: 4rem;
         font-family: vdl-logojrblack, sans-serif;
         font-weight: 900;
         font-style: normal;
@@ -73,12 +67,12 @@ header {
     /*　画面サイズが480pxからはここを読み込む　*/
     .title h1{
         width:100%;
-        color: rgb(112, 171, 223);
+        color: rgb(38, 173, 175);
         text-align: center;
         letter-spacing: 0.5rem;
         position:absolute;
         margin-top: 1vh;
-        font-size: 6rem;
+        font-size: 4rem;
         font-family: vdl-logojrblack, sans-serif;
         font-weight: 900;
         font-style: normal;
@@ -96,6 +90,48 @@ main {
 .background{
     height:100%;
     width:100%;
+}
+
+.logo {
+    width:400px;
+    margin:auto;
+}
+
+
+.btn,
+a.btn,
+button.btn {
+    margin:auto;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.5;
+  position: relative;
+  display: inline-block;
+  padding: 1rem 4rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  color: #212529;
+  border-radius: 0.5rem;
+}
+
+.btn--orange,
+a.btn--orange {
+  color: #fff;
+  background-color:rgb(112, 171, 223);
+}
+.btn--orange:hover,
+a.btn--orange:hover {
+  color: #fff;
+  background: rgb(112, 171, 223);
 }
 
 .links {
