@@ -18,6 +18,15 @@ header {
     width:100vw;
 }
 
+html,body{
+    overflow: hidden
+}
+
+button {
+    position: absolute;
+    z-index: 100;
+}
+
 .title {
     
 }
