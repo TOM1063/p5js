@@ -34,7 +34,7 @@ function preload(){
 }
 function setup() {
     rect_size_x = (windowWidth - 100);
-    rect_size_y = (windowWidth - 100)*9/16;
+    rect_size_y = (windowWidth - 100)*8/16;
     margin = windowHeight/20;
     scene_num = 0;
     scene_2_steps = 0;
