@@ -23,9 +23,20 @@ function draw() {
     stroke(255,255,255,10);
     strokeWeight(0.5);
     scale(2);
-    translate(0,0,-50);
-    //sphere(300);
+    translate(0,0,-30);
     model(obj_model);
+    var radius = 0.7 * sin(frameCount*0.03);
+    //var radius = 0.7 * noise(frameCount*0.03);
+    //var radius = 0.7 * (frameCount*0.01 %1) ;
+    //sphere(300);
+
+    scale(100);
+    noStroke();
+    fill(150,200,255,100);
+    fill(255,200,200,100);
+    //fill(255,255,255,50);
+    translate(0,0,0.2);
+    sphere(radius)
     //
 
     

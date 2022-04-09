@@ -1,0 +1,163 @@
+
+html {
+    /* position: fixed; */
+    top: 0;
+    margin:0;
+    padding:0;
+    overflow: hidden;
+}
+body {
+    position: fixed;
+    background-color: white;
+    margin:0;
+    padding:0;
+}
+header {
+    position: fixed;
+    height: 180px;
+    width:100vw;
+    margin-top:30vh;
+}
+
+.anim-box.slidein.is-animated{
+    animation: slideIn 1s cubic-bezier(0.25, 1, 0.5, 1) 1 forwards;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(180px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+    }
+    40%,100% {
+        opacity: 1;
+    }
+}
+
+.title {
+    
+}
+
+.title h1{
+    width:100%;
+    color: rgb(112, 171, 223);
+    text-align: center;
+    letter-spacing: 0.5rem;
+    position:absolute;
+    margin-top: 3vh;
+    font-size: 4rem;
+    font-family: vdl-logojrblack, sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    
+}
+@media screen and (min-width:800px) and ( max-width:1000px){ 
+    /*　画面サイズが480pxからはここを読み込む　*/
+    .title h1{
+        width:100%;
+        color: rgb(112, 171, 223);
+        text-align: center;
+        letter-spacing: 0.5rem;
+        position:absolute;
+        margin-top: 6vh;
+        font-size: 6rem;
+        font-family: vdl-logojrblack, sans-serif;
+        font-weight: 900;
+        font-style: normal;
+        
+    }
+}
+@media screen and (min-height:1000px) { 
+    /*　画面サイズが480pxからはここを読み込む　*/
+    .title h1{
+        width:100%;
+        color: rgb(112, 171, 223);
+        text-align: center;
+        letter-spacing: 0.5rem;
+        position:absolute;
+        margin-top: 1vh;
+        font-size: 6rem;
+        font-family: vdl-logojrblack, sans-serif;
+        font-weight: 900;
+        font-style: normal;
+        
+    }
+}
+
+
+main {
+    position: fixed;
+    height: 100vh;
+    width:100vw;
+}
+
+.background{
+    height:100%;
+    width:100%;
+}
+
+.links {
+    width:40rem;
+    height: 100%;
+    text-align: center;
+    margin:auto;
+    margin-top:20rem;
+    display:block;
+    font-size: 7rem;
+}
+
+.links  a{
+    display: block;
+    margin-top: 2rem;
+    text-decoration: none;
+    color:white;
+    font-size: 2rem;
+    background-color: black;
+    width:100%;
+    height:6rem;
+    text-align: center;
+}
+
+.canvas {
+    width:100vw;
+    height: auto;
+}
+
+
+
+
+footer {
+    position: fixed;
+    bottom: 0;
+    background-color: black;
+    width:100vw;
+    height:140px;
+    z-index: 10;
+}
+
+.infomation {
+    color: white;
+    font-size: 2rem;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    letter-spacing: 1rem;
+    position:absolute;
+}
+
+.info_text{
+    float: left;
+    margin-left: 35vw;
+    width:320px;
+}
+
+.plateau_icon{
+    float: left;
+}
+
+.plateau_icon img{
+    width: 6rem;
+    height:auto;
+    margin-top:10px;
+}

@@ -76,7 +76,7 @@ main {
 }
 
 .controller {
-    height:38vh;
+    height:36vh;
 }
 
 
@@ -144,7 +144,7 @@ main {
     height:400px;
     width:100vw;
     margin:auto;
-    margin-top: 1.7vh;
+    margin-top: 2.0vh;
     position: relative;
 
 }
@@ -193,7 +193,7 @@ main {
 
 .triangle{
 	width:57vw;
-	height:50vw;
+	height:55vw;
     margin-left:22vw;
     /* background-color: blue; */
     z-index: 10;
