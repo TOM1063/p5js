@@ -1,2 +1,2 @@
 # p5js
-p5js practice
+p5jsを使ったアプリケーション
